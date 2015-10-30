@@ -15,8 +15,8 @@ client = Client("https://my.interserver.net/api.php?wsdl")
 #print client ## shows detailed client info
 sid = client.service.api_login(argv[1], argv[2])
 if (sid == '')
-	die("Got a blank session")
+  die("Got a blank session")
 print "Got Session ID "+sid+"\n"
-	
+  
 result = client.service.api_domains_cancel_service()
 print result
