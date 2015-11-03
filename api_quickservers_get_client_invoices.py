@@ -6,7 +6,7 @@
 # This Function Applies to the QuickServers services.
 # Gets a list of all the invoices.
 #
-# @param sid string the *Session ID* you get from the [api_login](#api_login) call
+# @param sid string the *Session ID* you get from the [login](#login) call
 #
 from suds.client import Client
 client = Client("https://my.interserver.net/api.php?wsdl")
