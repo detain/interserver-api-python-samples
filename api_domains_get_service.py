@@ -8,7 +8,7 @@
 # would be in the "vps" module have order id
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
-# @param id int service id, such as VPS ID
+# @param id int 
 #
 from suds.client import Client
 client = Client("https://my.interserver.net/api.php?wsdl")
