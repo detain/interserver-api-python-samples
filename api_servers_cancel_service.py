@@ -1,12 +1,14 @@
 #!/usr/bin/python
 #
-# api_get_prepay_remaining
+# api_servers_cancel_service
 #   scripted in 2015 by detain@interserver.net for the MyAdmin API
 #
-# Get the PrePay amount available for a given module.
+# This Function Applies to the Dedicated Servers services.
+# Cancels a service for the passed module matching the passed id.  Canceling a
+# service will also cancel any addons for that service at the same time.
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
-# @param module string the module you want to check your prepay amounts on
+# @param id int ID / Service ID you wish to cancel
 #
 from suds.client import Client
 client = Client("https://my.interserver.net/api.php?wsdl")
@@ -16,5 +18,5 @@ if (sid == '')
   die("Got a blank session")
 print "Got Session ID "+sid+"\n"
   
-result = client.service.api_get_prepay_remaining()
+result = client.service.api_servers_cancel_service()
 print result

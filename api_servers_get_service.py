@@ -1,12 +1,14 @@
 #!/usr/bin/python
 #
-# api_get_prepay_remaining
+# api_servers_get_service
 #   scripted in 2015 by detain@interserver.net for the MyAdmin API
 #
-# Get the PrePay amount available for a given module.
+# This Function Applies to the Dedicated Servers services.
+# Gets service info for the given ID in the given Module.   An example of this
+# would be in the "vps" module have order id
 #
 # @param sid string the *Session ID* you get from the [login](#login) call
-# @param module string the module you want to check your prepay amounts on
+# @param id int 
 #
 from suds.client import Client
 client = Client("https://my.interserver.net/api.php?wsdl")
@@ -16,5 +18,5 @@ if (sid == '')
   die("Got a blank session")
 print "Got Session ID "+sid+"\n"
   
-result = client.service.api_get_prepay_remaining()
+result = client.service.api_servers_get_service()
 print result
